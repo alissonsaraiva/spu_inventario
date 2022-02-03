@@ -1,0 +1,9 @@
+CRITICAL - 2021-10-29 14:27:21 --> There is no data to update.
+#0 /opt/lampp/htdocs/inventario/system/BaseModel.php(880): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 /opt/lampp/htdocs/inventario/system/Model.php(737): CodeIgniter\BaseModel->update(Array, Array)
+#2 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(226): CodeIgniter\Model->update('1', Array)
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->edit_validation()
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}

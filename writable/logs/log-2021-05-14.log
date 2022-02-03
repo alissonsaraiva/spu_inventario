@@ -1,0 +1,49 @@
+CRITICAL - 2021-05-14 13:25:55 --> syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST)
+#0 /opt/lampp/htdocs/teste/system/Router/Router.php(170): CodeIgniter\Router\Router->autoRoute('crud')
+#1 /opt/lampp/htdocs/teste/system/CodeIgniter.php(816): CodeIgniter\Router\Router->handle('crud')
+#2 /opt/lampp/htdocs/teste/system/CodeIgniter.php(385): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /opt/lampp/htdocs/teste/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/teste/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-05-14 13:27:50 --> Call to undefined function App\Controllers\limpa_numero_processo()
+#0 /opt/lampp/htdocs/teste/system/CodeIgniter.php(936): App\Controllers\Crud->add_validation()
+#1 /opt/lampp/htdocs/teste/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#2 /opt/lampp/htdocs/teste/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/teste/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-05-14 15:07:49 --> Invalid file: processos_desaparecidos.php
+#0 /opt/lampp/htdocs/teste/system/View/View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('processos_desap...')
+#1 /opt/lampp/htdocs/teste/system/Common.php(1217): CodeIgniter\View\View->render('processos_desap...', Array, true)
+#2 /opt/lampp/htdocs/teste/app/Controllers/Desaparecidos.php(18): view('processos_desap...', Array)
+#3 /opt/lampp/htdocs/teste/system/CodeIgniter.php(936): App\Controllers\Desaparecidos->index()
+#4 /opt/lampp/htdocs/teste/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Desaparecidos))
+#5 /opt/lampp/htdocs/teste/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/teste/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-05-14 15:08:24 --> Invalid file: processos_desaparecidos.php
+#0 /opt/lampp/htdocs/teste/system/View/View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('processos_desap...')
+#1 /opt/lampp/htdocs/teste/system/Common.php(1217): CodeIgniter\View\View->render('processos_desap...', Array, true)
+#2 /opt/lampp/htdocs/teste/app/Controllers/Desaparecidos.php(18): view('processos_desap...', Array)
+#3 /opt/lampp/htdocs/teste/system/CodeIgniter.php(936): App\Controllers\Desaparecidos->index()
+#4 /opt/lampp/htdocs/teste/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Desaparecidos))
+#5 /opt/lampp/htdocs/teste/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/teste/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-05-14 15:10:28 --> Invalid file: processos_desaparecidos.php
+#0 /opt/lampp/htdocs/teste/system/View/View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('processos_desap...')
+#1 /opt/lampp/htdocs/teste/system/Common.php(1217): CodeIgniter\View\View->render('processos_desap...', Array, true)
+#2 /opt/lampp/htdocs/teste/app/Controllers/Desaparecidos.php(24): view('processos_desap...', Array)
+#3 /opt/lampp/htdocs/teste/system/CodeIgniter.php(936): App\Controllers\Desaparecidos->lista()
+#4 /opt/lampp/htdocs/teste/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Desaparecidos))
+#5 /opt/lampp/htdocs/teste/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/teste/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-05-14 15:11:19 --> Invalid file: processos_desaparecidos.php
+#0 /opt/lampp/htdocs/teste/system/View/View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('processos_desap...')
+#1 /opt/lampp/htdocs/teste/system/Common.php(1217): CodeIgniter\View\View->render('processos_desap...', Array, true)
+#2 /opt/lampp/htdocs/teste/app/Controllers/Desaparecidos.php(24): view('processos_desap...', Array)
+#3 /opt/lampp/htdocs/teste/system/CodeIgniter.php(936): App\Controllers\Desaparecidos->lista()
+#4 /opt/lampp/htdocs/teste/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Desaparecidos))
+#5 /opt/lampp/htdocs/teste/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/teste/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}

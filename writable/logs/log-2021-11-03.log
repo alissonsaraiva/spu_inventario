@@ -1,0 +1,162 @@
+CRITICAL - 2021-11-03 14:42:25 --> Invalid file: /servidores.php
+#0 /opt/lampp/htdocs/inventario/system/View/View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/servidores.php')
+#1 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('/servidores', Array, true)
+#2 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(355): view('/servidores', Array, Array)
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-11-03 14:42:39 --> Invalid file: servidores.php
+#0 /opt/lampp/htdocs/inventario/system/View/View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('servidores.php')
+#1 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('servidores', Array, true)
+#2 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(355): view('servidores', Array, Array)
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-11-03 14:44:06 --> Call to a member function store() on null
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-11-03 14:58:10 --> syntax error, unexpected '?', expecting end of file
+#0 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('view_servidor', Array, true)
+#2 /opt/lampp/htdocs/inventario/app/Views/innerpages/template.php(4): view('view_servidor')
+#3 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('innerpages/temp...', Array, true)
+#6 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(65): view('innerpages/temp...', Array)
+#7 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->view_single_data('3')
+#8 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#9 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-11-03 14:58:17 --> Use of undefined constant disabled - assumed 'disabled' (this will throw an Error in a future version of PHP)
+#0 /opt/lampp/htdocs/inventario/app/Views/view_servidor.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', '/opt/lampp/htdo...', 67, Array)
+#1 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('view_servidor', Array, true)
+#4 /opt/lampp/htdocs/inventario/app/Views/innerpages/template.php(4): view('view_servidor')
+#5 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('innerpages/temp...', Array, true)
+#8 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(65): view('innerpages/temp...', Array)
+#9 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->view_single_data('3')
+#10 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#11 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-11-03 15:18:14 --> Call to a member function move() on string
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-11-03 15:18:29 --> Call to a member function move_uploaded_file() on string
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-11-03 15:18:55 --> Call to a member function move_uploaded_file() on string
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-11-03 15:19:25 --> Call to a member function move_uploaded_file() on string
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-11-03 16:03:56 --> mysqli_sql_exception: Unknown column 'nadja' in 'where clause' in /opt/lampp/htdocs/inventario/system/Database/MySQLi/Connection.php:314
+Stack trace:
+#0 /opt/lampp/htdocs/inventario/system/Database/MySQLi/Connection.php(314): mysqli->query('SELECT * FROM s...')
+#1 /opt/lampp/htdocs/inventario/system/Database/BaseConnection.php(713): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 /opt/lampp/htdocs/inventario/system/Database/BaseConnection.php(641): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(138): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...')
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->search_single_data()
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#6 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-03 16:03:56 --> Return value of CodeIgniter\Database\MySQLi\Result::getNumRows() must be of the type int, null returned
+#0 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(146): CodeIgniter\Database\MySQLi\Result->getNumRows()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->search_single_data()
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-11-03 16:04:08 --> mysqli_sql_exception: Unknown column 'nadja' in 'where clause' in /opt/lampp/htdocs/inventario/system/Database/MySQLi/Connection.php:314
+Stack trace:
+#0 /opt/lampp/htdocs/inventario/system/Database/MySQLi/Connection.php(314): mysqli->query('SELECT * FROM s...')
+#1 /opt/lampp/htdocs/inventario/system/Database/BaseConnection.php(713): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 /opt/lampp/htdocs/inventario/system/Database/BaseConnection.php(641): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(138): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...')
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->search_single_data()
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#6 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-03 16:04:08 --> Return value of CodeIgniter\Database\MySQLi\Result::getNumRows() must be of the type int, null returned
+#0 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(146): CodeIgniter\Database\MySQLi\Result->getNumRows()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->search_single_data()
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2021-11-03 16:04:18 --> mysqli_sql_exception: Unknown column 'nadja' in 'where clause' in /opt/lampp/htdocs/inventario/system/Database/MySQLi/Connection.php:314
+Stack trace:
+#0 /opt/lampp/htdocs/inventario/system/Database/MySQLi/Connection.php(314): mysqli->query('SELECT * FROM s...')
+#1 /opt/lampp/htdocs/inventario/system/Database/BaseConnection.php(713): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM s...')
+#2 /opt/lampp/htdocs/inventario/system/Database/BaseConnection.php(641): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM s...')
+#3 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(138): CodeIgniter\Database\BaseConnection->query('SELECT * FROM s...')
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->search_single_data()
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#6 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-11-03 16:04:18 --> Return value of CodeIgniter\Database\MySQLi\Result::getNumRows() must be of the type int, null returned
+#0 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(146): CodeIgniter\Database\MySQLi\Result->getNumRows()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->search_single_data()
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-11-03 18:23:37 --> Undefined variable: title
+#0 /opt/lampp/htdocs/inventario/app/Views/cadastro_servidor.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/opt/lampp/htdo...', 15, Array)
+#1 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('cadastro_servid...', Array, true)
+#4 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(257): view('cadastro_servid...')
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->cadastro_servidor()
+#6 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#7 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-03 18:24:25 --> Undefined variable: title
+#0 /opt/lampp/htdocs/inventario/app/Views/cadastro_servidor.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/opt/lampp/htdo...', 15, Array)
+#1 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('cadastro_servid...', Array, true)
+#4 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(257): view('cadastro_servid...')
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->cadastro_servidor()
+#6 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#7 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-11-03 18:29:13 --> syntax error, unexpected ''funcao'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+#0 /opt/lampp/htdocs/inventario/system/Autoloader/Autoloader.php(265): CodeIgniter\Autoloader\Autoloader->includeFile('/opt/lampp/htdo...')
+#1 /opt/lampp/htdocs/inventario/system/Autoloader/Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(894): class_exists('\\App\\Controller...', true)
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(417): CodeIgniter\CodeIgniter->startController()
+#6 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
