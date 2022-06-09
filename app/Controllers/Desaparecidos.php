@@ -6,6 +6,7 @@ use App\Libraries\SendMail;
 use App\Libraries\Util;
 use App\Models\CrudModelDesaparecidos;
 use App\Models\CrudModel;
+use App\Models\UsuariosModel;
 
 class Desaparecidos extends BaseController
 {
@@ -114,7 +115,8 @@ protected $util;
             $crudModelDesaparecidos->save([
                 'numero_processo' => $numeroprocesso,
                 'numero_processo_alias' => $numero_processo_alias,
-                'foi_achado'  => false
+                'foi_achado'  => false,
+                'inventariante' => ""
 
             ]);          
             
@@ -131,6 +133,8 @@ protected $util;
             $crudModelDesaparecidos
                 ->whereIn('numero_processo', [$numeroprocesso])
                 ->set(['foi_achado' => 1])
+                ->set(['inventariante' => $usuarioInfo['nome']])
+                ->set(['data_hora' => date("Y-m-d")])
                 ->update();
 
             
@@ -179,7 +183,7 @@ protected $util;
 
         } else {
             
-            $data['processo'] = $crudModelDesaparecidos->where('foi_achado', $foi_achado)->orderBy('id', 'DESC')->paginate(10);
+            $data['processo'] = $crudModelDesaparecidos->where('foi_achado', $foi_achado)->orderBy('id', 'DESC')->findAll();
 
             if($foi_achado === "0"){
                 $data['total_processos_perdidos'] = $crudModelDesaparecidos->where('foi_achado', 0)->countAllResults();
@@ -203,7 +207,7 @@ protected $util;
 
         
         $data = [
-            'processo' => $crudModelDesaparecidos->orderBy('id', 'DESC')->paginate(10),
+            'processo' => $crudModelDesaparecidos->orderBy('id', 'DESC'),
             'total_processos_desaparecidos' => $crudModelDesaparecidos->countAll(),
             'total_processos_perdidos' => null,
             'total_registros' => null,
@@ -223,7 +227,7 @@ protected $util;
 
         $data['usuarioInfo'] = $usuarioInfo;
 
-        $data['pagination_link'] = $crudModelDesaparecidos->pager;
+        //$data['pagination_link'] = $crudModelDesaparecidos->pager;
         
 		
         echo view('innerpages/template', $data);
@@ -325,7 +329,10 @@ protected $util;
 	        $data = [
 	            'numero_processo' => $numeroprocesso,
                 'numero_processo_alias' => $processo,
-                'foi_achado'=>$foi_achado
+                'foi_achado'=>$foi_achado,
+                'inventariante' => $usuarioInfo['nome'],
+                'data_hora' => date("Y-m-d")
+
 	        ];
             
         	
@@ -355,6 +362,27 @@ protected $util;
         } else{
             return false;
         }
+}
+
+function ver_processo($numero_processo = null)
+{
+    $crudModel = new CrudModel();
+    
+    $usuariosModel = new UsuariosModel();
+
+    $usuarioLogadoId = session()->get('usuarioLogado');
+
+    $usuarioInfo = $usuariosModel->find($usuarioLogadoId);
+
+    $data['usuarioInfo'] = $usuarioInfo;
+
+    $data['processo'] = $crudModel->where('numero_processo', $numero_processo)->first();
+
+    $data['title'] 		= 'Ver Processo';
+    
+    $data['main_content']	= 'view_data_desaparecido';
+
+    echo view('innerpages/template', $data);
 }
 
 

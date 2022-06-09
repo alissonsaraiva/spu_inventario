@@ -210,24 +210,49 @@ class Servidores extends BaseController
             $nome = $this->request->getVar('nome');
             $cpf = $this->util->limpa_numero_processo($this->request->getVar('cpf'));
 
-	        $data = [
-	            'nome' => $nome,
-                'cpf' => $cpf,
-	            'siape'  => $this->request->getVar('siape'),
-	            'data_nascimento'  => $this->request->getVar('data_nascimento'),
-                'endereco'  => $this->request->getVar('endereco'),
-                'telefone'  => $this->request->getVar('telefone'),
-                'email_institucional'  => $this->request->getVar('email_institucional'),
-                'email_pessoal'  => $this->request->getVar('email_pessoal'),
-                'cargo'  => $this->request->getVar('cargo'),
-                'nivel_cargo'  => $this->request->getVar('nivel_cargo'),
-                'funcao'  => $this->request->getVar('funcao'),
-                'data_entrada_spu'  => $this->request->getVar('data_entrada_spu')
-	        ];
-        	
-            $servidoresModel->update($id, $data);
+            if(filesize($this->request->getFile('foto'))){
+                
+                $file = $this->request->getFile('foto');
+                $newName = $file->getRandomName();    
+                $file->move('./public/uploads/images/users', $newName);
 
-           
+                $data = [
+                    'nome' => $nome,
+                    'cpf' => $cpf,
+                    'siape'  => $this->request->getVar('siape'),
+                    'data_nascimento'  => $this->request->getVar('data_nascimento'),
+                    'endereco'  => $this->request->getVar('endereco'),
+                    'telefone'  => $this->request->getVar('telefone'),
+                    'email_institucional'  => $this->request->getVar('email_institucional'),
+                    'email_pessoal'  => $this->request->getVar('email_pessoal'),
+                    'cargo'  => $this->request->getVar('cargo'),
+                    'nivel_cargo'  => $this->request->getVar('nivel_cargo'),
+                    'funcao'  => $this->request->getVar('funcao'),
+                    'data_entrada_spu'  => $this->request->getVar('data_entrada_spu'),
+                    'foto'  => '/public/uploads/images/users/' . $newName
+                ];
+
+                $servidoresModel->update($id, $data);
+
+            } else {
+                
+                $data = [
+                    'nome' => $nome,
+                    'cpf' => $cpf,
+                    'siape'  => $this->request->getVar('siape'),
+                    'data_nascimento'  => $this->request->getVar('data_nascimento'),
+                    'endereco'  => $this->request->getVar('endereco'),
+                    'telefone'  => $this->request->getVar('telefone'),
+                    'email_institucional'  => $this->request->getVar('email_institucional'),
+                    'email_pessoal'  => $this->request->getVar('email_pessoal'),
+                    'cargo'  => $this->request->getVar('cargo'),
+                    'nivel_cargo'  => $this->request->getVar('nivel_cargo'),
+                    'funcao'  => $this->request->getVar('funcao'),
+                    'data_entrada_spu'  => $this->request->getVar('data_entrada_spu')
+                ];
+
+                $servidoresModel->update($id, $data);
+            }
 
         	$session = \Config\Services::session();
 
@@ -367,9 +392,19 @@ class Servidores extends BaseController
             $nome = $this->request->getVar('nome');
             $email_institucional = $this->request->getVar('email_institucional');
             $email_pessoal = $this->request->getVar('email_pessoal');
-            $file = $this->request->getFile('foto');
-            $newName = $file->getRandomName();    
-            $file->move('./public/uploads/images/users', $newName);
+            //$file = $this->request->getFile('foto');
+            
+            if(filesize($this->request->getFile('foto'))){
+                
+                $file = $this->request->getFile('foto');
+                $newName = $file->getRandomName();    
+                $file->move('./public/uploads/images/users', $newName);
+
+            } else {
+                $newName = "avatar_padrao.jpg";
+            }
+            
+            
             
             $servidoresModel->save([
                 'nome' => $nome,
@@ -511,9 +546,21 @@ class Servidores extends BaseController
             $servidoresModel = new ServidoresModel();
             
             $nome = $this->request->getVar('nome');
-            $file = $this->request->getFile('foto');
-            $newName = $file->getRandomName();    
-            $file->move('./public/uploads/images/users', $newName);
+           // $file = $this->request->getFile('foto');
+           // $newName = $file->getRandomName();    
+           // $file->move('./public/uploads/images/users', $newName);
+
+           
+            
+            if(filesize($this->request->getFile('foto'))){
+                
+                $file = $this->request->getFile('foto');
+                $newName = $file->getRandomName();    
+                $file->move('./public/uploads/images/users', $newName);
+
+            } else {
+                $newName = "avatar_padrao.jpg";
+            }
             
             $servidoresModel->save([
                 'nome' => $nome,

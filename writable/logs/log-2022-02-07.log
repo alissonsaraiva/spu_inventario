@@ -1,0 +1,40 @@
+CRITICAL - 2022-02-07 15:24:24 --> The original file is not a valid file.
+#0 /opt/lampp/htdocs/inventario/system/HTTP/Files/UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(372): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1644269064_eac6...')
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-07 15:34:21 --> The original file is not a valid file.
+#0 /opt/lampp/htdocs/inventario/system/HTTP/Files/UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(375): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1644269661_be78...')
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation()
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-07 15:39:40 --> The original file is not a valid file.
+#0 /opt/lampp/htdocs/inventario/system/HTTP/Files/UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(526): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1644269980_8fab...')
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation_logado()
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-07 15:41:47 --> The original file is not a valid file.
+#0 /opt/lampp/htdocs/inventario/system/HTTP/Files/UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(532): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1644270107_7953...')
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation_logado()
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-07 15:43:31 --> The original file is not a valid file.
+#0 /opt/lampp/htdocs/inventario/system/HTTP/Files/UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 /opt/lampp/htdocs/inventario/app/Controllers/Servidores.php(532): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1644270211_756e...')
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Servidores->add_validation_logado()
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servidores))
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -179,7 +179,7 @@
 
                     <div class="form-group">
                         <input type="hidden" name="id" value="<?php echo $processo["id"]; ?>" />
-                        <input type="button" class="btn btn-primary" onclick="location.href='<?php echo base_url('/crud')?>';" value="Voltar" />
+                        <input type="button" class="btn btn-primary" onclick="location.href='<?php echo base_url('/desaparecidos')?>';" value="Voltar" />
                     </div>
                 </form>
             </div>

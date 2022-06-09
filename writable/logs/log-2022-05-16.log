@@ -1,0 +1,75 @@
+CRITICAL - 2022-05-16 08:43:03 --> Call to a member function setPath() on null
+#0 /opt/lampp/htdocs/inventario/system/View/View.php(220): include()
+#1 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('crud_view', Array, true)
+#3 /opt/lampp/htdocs/inventario/app/Views/innerpages/template.php(4): view('crud_view')
+#4 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('innerpages/temp...', Array, true)
+#7 /opt/lampp/htdocs/inventario/app/Controllers/Crud.php(348): view('innerpages/temp...', Array)
+#8 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#9 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-05-16 08:44:41 --> Call to a member function library() on null
+#0 /opt/lampp/htdocs/inventario/system/View/View.php(220): include()
+#1 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('crud_view', Array, true)
+#3 /opt/lampp/htdocs/inventario/app/Views/innerpages/template.php(4): view('crud_view')
+#4 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('innerpages/temp...', Array, true)
+#7 /opt/lampp/htdocs/inventario/app/Controllers/Crud.php(348): view('innerpages/temp...', Array)
+#8 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#9 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-05-16 08:49:26 --> Call to a member function paginate() on array
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 08:50:10 --> Call to a member function paginate() on array
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 08:58:00 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /opt/lampp/htdocs/inventario/system/BaseModel.php on line 1772
+#0 /opt/lampp/htdocs/inventario/system/BaseModel.php(1772): CodeIgniter\Database\BaseConnection->query(Object(CodeIgniter\Database\MySQLi\Result))
+#1 /opt/lampp/htdocs/inventario/system/Model.php(832): CodeIgniter\BaseModel->__call('query', Array)
+#2 /opt/lampp/htdocs/inventario/app/Controllers/Crud.php(339): CodeIgniter\Model->__call('query', Array)
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#4 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#5 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-16 08:58:45 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 09:00:05 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+#0 /opt/lampp/htdocs/inventario/system/View/View.php(220): include()
+#1 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('crud_view', Array, true)
+#3 /opt/lampp/htdocs/inventario/app/Views/innerpages/template.php(4): view('crud_view')
+#4 /opt/lampp/htdocs/inventario/system/View/View.php(220): include('/opt/lampp/htdo...')
+#5 /opt/lampp/htdocs/inventario/system/View/View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 /opt/lampp/htdocs/inventario/system/Common.php(1217): CodeIgniter\View\View->render('innerpages/temp...', Array, true)
+#7 /opt/lampp/htdocs/inventario/app/Controllers/Crud.php(348): view('innerpages/temp...', Array)
+#8 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#9 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-05-16 09:00:37 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::paginate()
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Crud->search_single_data()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}

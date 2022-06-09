@@ -14,8 +14,11 @@
 
         <div class="card">
 
+        <img src="<?php echo base_url($servidores['foto'])?>" alt="Foto" class="rounded mx-auto d-block" style="width:250px;height:250px; padding-top: 10px">
+
+
 <div class="card-body">
-    <form method="post" action="<?php echo base_url("/servidores/edit_validation")?>">
+    <form method="post" enctype="multipart/form-data" action="<?php echo base_url("/servidores/edit_validation")?>">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -163,6 +166,24 @@
 
                     
                         </div>
+
+                    </div>            
+                </div>
+
+                <div class="container">
+                        <div class="row">
+                            <div class="col"> 
+                            
+
+                            <div class="mb-3">
+                <label for="formFile" class="form-label">Foto (JPG, PNG ou JPEG)</label>
+                <input class="form-control" type="file" id="foto" name="foto">
+            </div>
+
+
+                            </div>
+
+                        <div class="col"> </div>
 
                     </div>            
                 </div>

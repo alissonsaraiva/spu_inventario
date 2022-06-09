@@ -15,6 +15,28 @@
                     
                 
                 <div class="form-group">
+                        <label>Local do arquivo</label>
+                        <select name="local_arquivo" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="terreo" <?php if($processo['local_arquivo'] == 'terreo') echo 'selected'; ?>>Térreo</option>
+                            <option value="9andar" <?php if($processo['local_arquivo'] == '9andar') echo 'selected'; ?>>9º Andar</option>
+                        </select>
+
+                        <?php 
+                        if($validation->getError('local_arquivo'))
+                        {
+                            echo "
+                            <div class='alert alert-danger mt-2'>
+                            ".$validation->getError('local_arquivo')."
+                            </div>
+                            ";
+                        }
+                        ?>
+                    </div>
+
+                
+                
+                <div class="form-group">
                         <label>Número do processo</label>
                         <input type="text" name="numero_processo" class="form-control" value="<?php echo $processo['numero_processo_alias']; ?>">
 
@@ -133,7 +155,7 @@
 
                     <div class="form-group">
                         <label>Inventariante</label>
-                        <input type="text" name="inventariante" class="form-control" value="<?php echo $processo['inventariante']; ?>">
+                        <input type="text" name="inventariante" class="form-control" value="<?php echo $usuarioInfo['nome']; ?>">
 
                         <?php 
                         if($validation->getError('inventariante'))

@@ -1,0 +1,13 @@
+CRITICAL - 2022-05-17 17:36:58 --> Argument 2 passed to CodeIgniter\Model::set() must be of the type string or null, array given, called in /opt/lampp/htdocs/inventario/app/Controllers/Desaparecidos.php on line 134
+#0 /opt/lampp/htdocs/inventario/app/Controllers/Desaparecidos.php(134): CodeIgniter\Model->set(Array, Array, Array)
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Desaparecidos->add_processo_desaparecido()
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Desaparecidos))
+#3 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-17 17:37:53 --> Call to a member function processo_desaparecido() on null
+#0 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(937): App\Controllers\Desaparecidos->add_processo_desaparecido()
+#1 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Desaparecidos))
+#2 /opt/lampp/htdocs/inventario/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/inventario/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}

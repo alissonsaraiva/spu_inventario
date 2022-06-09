@@ -58,11 +58,16 @@
                         echo '
                         Data da pesquisa: '.$data_pesquisa.'
                         ';
+
+                       
                     }
                     
                     ?>
-                    
+
+                    <span style="float:right"><?php  echo 'Total de processos cadastrados: '. $qtd_processos. '
+                        '; ?></span>
                 <table class="table table-striped table-bordered">
+                    
                     
                     <tr>
                         <th>Inventariante</th>
@@ -84,10 +89,14 @@
                                 <td>'.$detalhe["qtd_processos"].'</td>';
                             
                         }
+
+                       
                     }
 
                     ?>
                 </table>
+
+                
             </div>
             <div>
 

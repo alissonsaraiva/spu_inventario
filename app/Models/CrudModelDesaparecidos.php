@@ -10,7 +10,7 @@ class CrudModelDesaparecidos extends Model
 
 	protected $primaryKey = 'id';
 
-	protected $allowedFields = ['numero_processo','numero_processo_alias', 'foi_achado'];
+	protected $allowedFields = ['numero_processo','numero_processo_alias', 'foi_achado', 'inventariante', 'data_hora'];
 
 }
 

@@ -151,9 +151,10 @@ $validation = \Config\Services::validation();
             ?>
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <th>ID</th>
                             <th>Nº Processo</th>
                             <th>Foi achado?</th>
+                            <th>Inventariante</th>
+                            <th>Data</th>
                             <th>Editar</th>
                             <th>Deletar</th>
                         </tr>
@@ -163,16 +164,20 @@ $validation = \Config\Services::validation();
                         {
                             foreach($processo as $detalhe)
                             {
-                                echo '
-                                <tr>
-                                    <td>'.$detalhe["id"].'</td>
-                                    <td>'.$detalhe["numero_processo_alias"].'</td>';
+                             //   echo '
+                             //   <tr>
+                            //        <td>'.$detalhe["numero_processo_alias"].'</td>';
+                                    
                                     
 
                                 if($detalhe["foi_achado"] == 0){
                                     echo '
-                                    
+                                    <tr>
+                                    <td>'.$detalhe["numero_processo_alias"].'</td>
+
                                     <td>'."Não".'</td>
+                                    <td>'."".'</td>
+                                    <td>'."".'</td>
                                     <td><a href="'.base_url().'/desaparecidos/fetch_single_data/'.$detalhe["id"].'" class="btn btn-sm btn-warning">Editar</a></td>
                                     <td><button type="button" onclick="delete_data('.$detalhe["id"].')" class="btn btn-danger btn-sm">Deletar</button></td>
                                     </tr>
@@ -181,8 +186,12 @@ $validation = \Config\Services::validation();
 
                                 if($detalhe["foi_achado"] == 1){
                                     echo '
-                                    
+                                    <tr>
+                                    <td><a href="'.base_url().'/desaparecidos/ver_processo/'.$detalhe["numero_processo"].'">'.$detalhe["numero_processo_alias"].'</a></td>
+
                                     <td>'."Sim".'</td>
+                                    <td>'.$detalhe["inventariante"].'</td>
+                                    <td>'.date("d/m/Y", strtotime($detalhe["data_hora"])).'</td>
                                     <td><a href="'.base_url().'/desaparecidos/fetch_single_data/'.$detalhe["id"].'" class="btn btn-sm btn-warning">Editar</a></td>
                                     <td><button type="button" onclick="delete_data('.$detalhe["id"].')" class="btn btn-danger btn-sm">Deletar</button></td>
                                     </tr>

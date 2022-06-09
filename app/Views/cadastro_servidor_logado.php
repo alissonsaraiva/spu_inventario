@@ -10,6 +10,8 @@
 
     <script src="<?php echo base_url('public/bootstrap/js/bootstrap.min.js') ?>"></script>
     <script src="<?php echo base_url('public/js/jquery-3.6.0.min.js') ?>"></script>
+    <script src="<?php echo base_url('public/js/jquery-1.2.6.pack.js') ?>"></script>
+    <script src="<?php echo base_url('public/js/jquery.maskedinput-1.1.4.pack.js') ?>"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <title><?php echo $title; ?></title>
@@ -21,6 +23,10 @@ $(document).ready( function(){
               $(".alert").fadeOut("fast");
             
        }, 10000);
+
+       $("#cpf").mask("999.999.999-99");
+       $("#data_nascimento").mask("99/99/9999");
+       $("#telefone").mask("(99) 99999-9999"); 
 });
     
     </script>
@@ -79,7 +85,7 @@ if($session->getFlashdata('alert'))
                 <div class="col">
                     <div class="form-group">
                             <label>Data de nascimento</label>
-                            <input type="text" name="data_nascimento" class="form-control" placeholder="Digite sua data de nascimento (dd/mm/aaaa)." value="<?php echo set_value(('data_nascimento')) ?>" />
+                            <input type="text" name="data_nascimento" id = "data_nascimento" class="form-control" placeholder="Digite sua data de nascimento (dd/mm/aaaa)." value="<?php echo set_value(('data_nascimento')) ?>" />
                             <?php
                             if($validation->getError('data_nascimento'))
                             {
@@ -122,7 +128,7 @@ if($session->getFlashdata('alert'))
                         <div class="col"> 
                             <div class="form-group">
                             <label>CPF</label>
-                            <input type="text" name="cpf" class="form-control" placeholder="Digite o número do seu CPF" value="<?php echo set_value(('cpf')) ?>" />
+                            <input  type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite o número do seu CPF" value="<?php echo set_value(('cpf')) ?>" />
                             <?php
                             if($validation->getError('cpf'))
                             {
@@ -183,7 +189,7 @@ if($session->getFlashdata('alert'))
                             
                         <div class="form-group">
                 <label>Telefone</label>
-                <input type="text" name="telefone" class="form-control" placeholder="Digite seu telefone" value="<?php echo set_value(('telefone')) ?>" />
+                <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Digite seu telefone" value="<?php echo set_value(('telefone')) ?>" />
                 <?php
                 if($validation->getError('telefone'))
                 {

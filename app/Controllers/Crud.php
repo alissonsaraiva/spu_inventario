@@ -108,7 +108,13 @@ class Crud extends BaseController
                                 'errors'=> [
                                     'required' => 'O campo termo de encerramento é obrigatório.'
                                 ]
-                                ]
+                                ],
+                                'local_arquivo' 	=> [
+                                    'rules'=>'required',
+                                    'errors'=> [
+                                        'required' => 'O campo local do arquivo é obrigatório.'
+                                    ]
+                                    ]
         ]);
 
         
@@ -138,6 +144,7 @@ class Crud extends BaseController
             $inventariante = $this->request->getVar('inventariante');
             
             $crudModel->save([
+                'local_arquivo'  => $this->request->getVar('local_arquivo'),
                 'numero_processo' => $numeroprocesso,
                 'numero_processo_alias' => $processo,
 	            'estante'  => $this->request->getVar('estante'),
@@ -212,9 +219,6 @@ class Crud extends BaseController
 		
         $data['main_content']	= 'view_data';
 
-        
-
-		
         echo view('innerpages/template', $data);
     }
 
@@ -245,6 +249,14 @@ class Crud extends BaseController
         $caixa = $this->request->getVar('caixa');
         
         $cod = $this->request->getVar('cod');
+
+        $local_arquivo = $this->request->getVar('local_arquivo');
+
+        $observacao = $this->request->getVar('observacao');
+
+        $termo_encerramento = $this->request->getVar('termo_encerramento');
+
+    
 
         if($numero_processo !== ""){
             $consulta = $consulta . "numero_processo = " . $numero_processo;
@@ -285,6 +297,30 @@ class Crud extends BaseController
             }
         }
 
+        if($local_arquivo !== ""){
+            if($numero_processo !== "" || $prateleira !== "" || $estante !== "" || $caixa !== "" || $cod !== "" ){
+                $consulta = $consulta . " AND " . "local_arquivo = " . "'" . $local_arquivo. "'";
+            } else {
+                $consulta = $consulta . "local_arquivo = " . "'" . $local_arquivo. "'";
+            }
+        }
+
+        if($observacao !== ""){
+            if($numero_processo !== "" || $prateleira !== "" || $estante !== "" || $caixa !== "" || $cod !== "" || $local_arquivo !== "" ){
+                $consulta = $consulta . " AND " . "observacao LIKE " . "'%" . $observacao. "%'";
+            } else {
+                $consulta = $consulta . "observacao LIKE " . "'%" . $observacao. "%'";
+            }
+        }
+
+        if($termo_encerramento !== ""){
+            if($numero_processo !== "" || $prateleira !== "" || $estante !== "" || $caixa !== "" || $cod !== "" || $observacao !== "" ){
+                $consulta = $consulta . " AND " . "termo_encerramento = " . "'" . $termo_encerramento. "'";
+            } else {
+                $consulta = $consulta . "termo_encerramento = " . "'" . $termo_encerramento. "'";
+            }
+        }
+
         $consulta = $consulta . ';';
 
         $query = $db->query($consulta);
@@ -294,7 +330,7 @@ class Crud extends BaseController
        
 
 
-        if($numero_processo !== "" || $prateleira !== "" || $estante !== "" || $caixa !== "" || $cod !== ""){
+        if($numero_processo !== "" || $prateleira !== "" || $estante !== "" || $caixa !== "" || $cod !== "" || $local_arquivo !== "" || $observacao !== "" || $termo_encerramento !== ""){
             $total_registros =  $query->getNumRows();
             $data = [
                 'processo' => $results,
@@ -351,7 +387,13 @@ class Crud extends BaseController
                                 'errors'=> [
                                     'required' => 'O campo termo de encerramento é obrigatório.'
                                 ]
-                                ]
+                                ],
+                                'local_arquivo' 	=> [
+                                    'rules'=>'required',
+                                    'errors'=> [
+                                        'required' => 'O campo local do arquivo é obrigatório.'
+                                    ]
+                                    ]
         ]);
 
         $crudModel = new CrudModel();
@@ -381,7 +423,8 @@ class Crud extends BaseController
             $numeroprocesso = $this->util->limpa_numero_processo($this->request->getVar('numero_processo'));
 
 	        $data = [
-	            'numero_processo' => $numeroprocesso,
+	            'local_arquivo'  => $this->request->getVar('local_arquivo'),
+                'numero_processo' => $numeroprocesso,
                 'numero_processo_alias' => $processo,
 	            'estante'  => $this->request->getVar('estante'),
 	            'prateleira'  => $this->request->getVar('prateleira'),

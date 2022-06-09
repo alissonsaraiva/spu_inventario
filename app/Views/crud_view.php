@@ -64,6 +64,10 @@ $validation = \Config\Services::validation();
                         <label>Caixa</label>
                         <input type="text" name="caixa" class="form-control" placeholder="Digite o número da caixa" value="<?php echo set_value(('caixa')) ?>"/>
                     </div>
+                    <div class="form-group">
+                <label>Observação</label>
+                <input type="text" name="observacao" class="form-control" placeholder="Digite o termo a ser pesquisado" value="<?php echo set_value(('observacao')) ?>"/>
+            </div>
             </div>
             <div class="col-sm">
                     <div class="form-group">
@@ -75,7 +79,26 @@ $validation = \Config\Services::validation();
                         <label>COD</label>
                         <input type="text" name="cod" class="form-control" placeholder="Digite o COD" value="<?php echo set_value(('cod')) ?>"/>
                     </div>
+
+                    <div class="form-group">
+                        <label>Local do arquivo</label>
+                        <select name="local_arquivo" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="terreo" <?= set_select('local_arquivo', 'terreo') ?>>Térreo</option>
+                            <option value="9andar" <?= set_select('local_arquivo', '9andar') ?>>9º Andar</option>
+                        </select>
+            </div>
+
+            <div class="form-group">
+                        <label>Possui termo de encerramento?</label>
+                        <select name="termo_encerramento" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="sim" <?php if($processo['termo_encerramento'] == 'sim') echo 'selected'; ?>>Sim</option>
+                            <option value="nao" <?php if($processo['termo_encerramento'] == 'nao') echo 'selected'; ?>>Não</option>
+                        </select>
+                    </div>
                 </div>
+
         </div>
         <div class="form-group">
                 <button type="submit" class="btn btn-primary">Pesquisar</button>
@@ -118,17 +141,17 @@ $validation = \Config\Services::validation();
             ?>
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <th>ID</th>
+                            <th>Local</th>
                             <th>Nº Processo</th>
                             <th>Estante</th>
                             <th>Prateleira</th>
                             <th>Caixa</th>
-                            <th>COD</th>
+                            <th>Observação</th>
                             <th>Detalhes</th>
+                            <th>Editar</th>
 
                             <?php if($usuarioInfo['admin'] == 1): ?>
-
-                            <th>Editar</th>
+                        
                             <th>Deletar</th>
 
                             <?php endif ?>
@@ -136,24 +159,38 @@ $validation = \Config\Services::validation();
                         </tr>
                         <?php
 
+                        $local = "";
+                        $observacao = "";
+
                         if($processo)
                         {
                             foreach($processo as $detalhe)
                             {
+                                if ($detalhe["local_arquivo"] == "9andar"){
+                                    $local = "9º Andar";
+                                } else if ($detalhe["local_arquivo"] == "terreo") {
+                                    $local = "Térreo";
+                                }
+
+                                if(empty($detalhe["observacao"])){
+                                    $observacao = "nenhuma observação cadastrada";
+                                } else {
+                                    $observacao = $detalhe["observacao"];
+                                }   
+
                                 echo '
                                 <tr>
-                                    <td>'.$detalhe["id"].'</td>
+                                    <td>'.$local.'</td>
                                     <td>'.$detalhe["numero_processo_alias"].'</td>
                                     <td>'.$detalhe["estante"].'</td>
                                     <td>'.$detalhe["prateleira"].'</td>
                                     <td>'.$detalhe["caixa"].'</td>
-                                    <td>'.$detalhe["cod_inventario"].'</td>
-                                    <td><a href="'.base_url().'/crud/view_single_data/'.$detalhe["id"].'" class="btn btn-sm btn-info">Detalhes</a></td>';
-                                    
+                                    <td>'.$observacao.'</td>
+                                    <td><a href="'.base_url().'/crud/view_single_data/'.$detalhe["id"].'" class="btn btn-sm btn-info">Detalhes</a></td>
+                                    <td><a href="'.base_url().'/crud/fetch_single_data/'.$detalhe["id"].'" class="btn btn-sm btn-warning">Editar</a></td>';
 
                                 if($usuarioInfo['admin'] == 1){
-                                    echo '<td><a href="'.base_url().'/crud/fetch_single_data/'.$detalhe["id"].'" class="btn btn-sm btn-warning">Editar</a></td>
-                                    <td><button type="button" onclick="delete_data('.$detalhe["id"].')" class="btn btn-danger btn-sm">Deletar</button></td>
+                                    echo '<td><button type="button" onclick="delete_data('.$detalhe["id"].')" class="btn btn-danger btn-sm">Deletar</button></td>
                                 </tr>';
                                 } else {
                                     echo '</tr>';

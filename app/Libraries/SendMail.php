@@ -7,11 +7,11 @@ class SendMail
     // This function converts a string into slug format
     public function processo_desaparecido($processo, $inventariante = null)
     {
-        $to = ['genar.junior@economia.gov.br', 'spuce@economia.gov.br', 'cogesspuce@economia.gov.br'];
+        $to = ['genar.junior@economia.gov.br', 'spuce@economia.gov.br', 'cogesspuce@economia.gov.br', 'walter.godinho@economia.gov.br'];
         //$to = 'alissonsaraiva@gmail.com';
-        $subject = "Sistema de Inventário - Processo ".$processo. " encontrado!";
+        $subject = "Sistema SPU - Processo ".$processo. " encontrado!";
         $message1 = "O sistema de inventário acabou de encontrar o processo de nº ".$processo . "." ;
-        $message2 = " Este processo foi cadastrado no sistema pelo servidor " . $inventariante . "." ;
+        $message2 = " Este processo foi cadastrado hoje no sistema pelo inventariante " . $inventariante . "." ;
 
         if(!is_null($inventariante)){
             $message = $message1 . $message2;

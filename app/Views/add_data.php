@@ -18,6 +18,26 @@
     </div>
     <div class="card-body">
         <form method="post" action="<?php echo base_url("/crud/add_validation")?>">
+            
+        <div class="form-group">
+                        <label>Local do arquivo</label>
+                        <select name="local_arquivo" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="terreo" <?= set_select('local_arquivo', 'terreo') ?>>Térreo</option>
+                            <option value="9andar" <?= set_select('local_arquivo', '9andar') ?>>9º Andar</option>
+                        </select>
+                <?php
+                if($validation->getError('local_arquivo'))
+                {
+                    echo "
+                    <div class='alert alert-danger mt-2'>
+                    ".$validation->getError('local_arquivo')."
+                    </div>
+                    ";
+                }
+                ?>
+            </div>
+        
             <div class="form-group">
                 <label>Nº do processo</label>
                 <input type="text" name="numero_processo" class="form-control" placeholder="Digite o número do processo"  value="<?php echo set_value(('numero_processo')) ?>"/>

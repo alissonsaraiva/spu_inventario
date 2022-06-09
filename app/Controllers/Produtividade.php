@@ -28,8 +28,15 @@ class Produtividade extends BaseController
 
         $results = $query->getResultArray();
 
+        $qtd_processos = 0;
+
+        foreach ($results as $valor) {
+            $qtd_processos += $valor['qtd_processos'];
+        }
+
         $data = [
             'produtividade' => $results,
+            'qtd_processos' => $qtd_processos,
             'consulta' => $consulta,
             'data_pesquisa' => $data_pesquisa,
             'title' => 'Gestão de Produtividade',
@@ -69,6 +76,7 @@ class Produtividade extends BaseController
         $data_pesquisa = date("d-m-Y", strtotime($data_hora_inicio)) . " a " . date("d-m-Y", strtotime($data_hora_fim));
 
         $consulta = "SELECT inventariante, COUNT(*) AS 'qtd_processos' FROM `processos` WHERE cast(data_hora as date) >= " ."'".$data_hora_formatada_inicio."'"." and " ."'".$data_hora_formatada_fim."'"." GROUP BY inventariante;";
+        
 
         } else {
 
@@ -85,9 +93,16 @@ class Produtividade extends BaseController
         
         $results = $query->getResultArray();
 
+        $qtd_processos = 0;
+
+        foreach ($results as $valor) {
+            $qtd_processos += $valor['qtd_processos'];
+        }
+
 
         $data = [
             'produtividade' => $results,
+            'qtd_processos' => $qtd_processos,
             'data_pesquisa' => $data_pesquisa,
             'consulta' => $consulta,
             'title' => 'Gestão de Produtividade',
